@@ -272,9 +272,8 @@ std::string Utils::char2hex(const char dec)
     if (0  <= dig2 && dig2 <=  9) dig2 += 48;
     if (10 <= dig2 && dig2 <= 15) dig2 += 87;
 
-    std::string ret{};
-    ret.append(&dig1, 1);
-    ret.append(&dig2, 1);
+    std::string ret{std::to_string(dig1)};
+    ret += dig2;
 
     return ret;
 }
